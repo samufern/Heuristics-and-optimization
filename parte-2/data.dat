@@ -1,0 +1,42 @@
+/* Archivo data.dat */
+/* Datos para el problema de asignación de llamadas a parkings de ambulancias */
+
+
+/* Conjuntos de distritos y parkings */
+set DISTRICTS := D1 D2 D3 D4 D5;
+set PARKINGS := P1 P2 P3 P4 P5 P6;
+
+/* Número de llamadas de cada distrito */
+param calls :=
+D1 5000
+D2 6500 
+D3 5400
+D4 7500
+D5 5500;
+
+/* Tiempo que tarda una ambulancia en llegar a cada distrito desde un parking */
+param time : P1 P2 P3 P4 P5 P6 :=
+D1 20 15 30 12 20 55
+D2 25 18 35 15 18 35
+D3 30 20 25 40 20 20
+D4 15 12 25 10 17 30
+D5 28 20 22 20 10 30;
+
+/* Costos fijos para establecer un parking */
+param fixedCost :=
+P1 50000
+P2 50000
+P3 50000
+P4 50000
+P5 50000
+P6 50000;
+
+/* Costo variable por minuto para atender las llamadas */
+param variableCost := 2;
+
+/* Parámetro M */
+param M := 10000;
+
+
+end;
+
